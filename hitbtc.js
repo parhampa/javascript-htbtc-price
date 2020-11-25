@@ -4,6 +4,7 @@ get xrp to usdt price from hitbtc
 */
 var min=0;
 var max=0;
+var coin="";
 function titleModified() {
 	var title=document.title;
 	price=title.substr(1,5);
@@ -11,12 +12,14 @@ function titleModified() {
 	{
 		if(price<=min)
 		{
-			var msg = new SpeechSynthesisUtterance('buy time');
+			var sentence= coin + 'buy time';
+			var msg = new SpeechSynthesisUtterance(sentence);
 			window.speechSynthesis.speak(msg);
 		}
 		if(price>=max)
 		{
-			var msg = new SpeechSynthesisUtterance('sell time');
+			var sentence= coin + 'sell time';
+			var msg = new SpeechSynthesisUtterance(sentence);
 			window.speechSynthesis.speak(msg);
 		}
 		console.log(price);

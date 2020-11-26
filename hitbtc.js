@@ -2,9 +2,9 @@
 https://hitbtc.com/xrp-to-usdt
 get xrp to usdt price from hitbtc
 */
-var min=0;
-var max=0;
-var coin="";
+var min=0.310;
+var max=0.410;
+var coin="XRP";
 function titleModified() {
 	var title=document.title;
 	price=title.substr(1,5);
@@ -23,6 +23,8 @@ function titleModified() {
 			window.speechSynthesis.speak(msg);
 		}
 		console.log(price);
+		console.log("buy count :"+document.getElementsByClassName('trades__actionBuy').length);
+		console.log("sell count :"+document.getElementsByClassName('trades__actionSell').length);
 	}
 }
 
